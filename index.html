@@ -70,15 +70,15 @@
                             <i class="fa-solid fa-ellipsis-vertical" style="color: #b0b0b1;"></i>
                         </span>
                     </article>
-                    <article class="bg-picture">
-                        <!-- inserisco i messaggi con FLOAT!!!!-->
-                        <div class="flex end">
-                            <p class="green">q</p>
-                            <p class="green">d</p>
+
+                    <article class="bg-picture" v-for="(msg, indexMsg) in contacts">
+                        <div class="flex end" >
+                            <p class="green">{{ msg.message}}</p>
+                            <p class="green">{{}}</p>
                         </div>
                         
                         <div class="flex start">
-                            <p class="white">d</p>
+                            <p class="white">{{}}</p>
                         </div>
                     </article>
                     <article class=" flex footer">
