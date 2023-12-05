@@ -27,7 +27,8 @@ div.wrapper{
     height: 90%;
     position: absolute;
     top: 50px;
-    left: 150px;
+    left: 50%;
+    transform: translateX(-50%);
     flex-direction: row;
 }
 
