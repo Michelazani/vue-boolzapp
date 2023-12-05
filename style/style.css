@@ -139,7 +139,8 @@ article img.reduced-img{
 }
 
 article p .fs-s{
-    font-size: 0.9rem;}
+    font-size: 0.9rem;
+}
 
 article p.fs-xs{
     font-size: 0.7rem;
@@ -162,4 +163,8 @@ input.search-chat{
 
 article p.underline{
     text-decoration: underline;
+}
+
+img{
+    margin-right: 0.6rem;
 }
