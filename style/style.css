@@ -8,9 +8,16 @@
 /* FLEX */
 .flex{
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center; 
 }
+
+/* BACKGROUND */
+div.bg-light{
+    background-color:rgb(234, 234, 234) ;
+    padding: 0.5rem;
+}
+
 
 header{
     height: 15vh;
@@ -43,3 +50,10 @@ width: 60%;
 height: 100%;
 background-color: rgb(170, 255, 0);
 }
+
+div img.icon-to-talk{
+    width: 3rem;
+    border-radius: 2rem;
+}
+
+
