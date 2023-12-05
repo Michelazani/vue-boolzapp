@@ -12,10 +12,31 @@
    align-items: center; 
 }
 
+
 /* BACKGROUND */
-div.bg-light{
+article.bg-light{
     background-color:rgb(234, 234, 234) ;
     padding: 0.5rem;
+}
+
+article.bg-picture{
+    height: 83%;
+    background-image: url(../img/mine.jpg);
+}
+
+article.footer{
+    background-color: rgb(243, 238, 234);
+}
+
+
+/* ICONS */
+i{
+    padding: 0.5rem;
+}
+
+i.fa-regular.fa-face-smile,
+i.fa-solid.fa-microphone{
+    font-size: 1rem;
 }
 
 
@@ -40,20 +61,27 @@ div.wrapper{
 }
 
 .left-box{
-width: 40%;
+width: 35%;
 height: 100%;
-background-color: rgb(0, 30, 255);
+border: 0.5px solid gray;
 }
 
 .right-box{
-width: 60%;
+width: 65%;
 height: 100%;
-background-color: rgb(170, 255, 0);
+border: 0.5px solid gray;
+border-left: transparent;
 }
 
-div img.icon-to-talk{
-    width: 3rem;
+article img.icon-to-talk{
+    width: 2.5rem;
     border-radius: 2rem;
 }
 
+article p .fs-s{
+    font-size: 0.9rem;}
 
+article p.fs-xs{
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+}
