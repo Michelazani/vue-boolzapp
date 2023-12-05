@@ -12,6 +12,9 @@
    align-items: center; 
 }
 
+.flex-start{
+    justify-content: flex-start;
+}
 
 /* BACKGROUND */
 article.bg-light{
@@ -20,7 +23,7 @@ article.bg-light{
 }
 
 article.bg-picture{
-    height: 83%;
+    height: 85%;
     background-image: url(../img/mine.jpg);
 }
 
@@ -28,6 +31,22 @@ article.footer{
     background-color: rgb(243, 238, 234);
 }
 
+article.bg-blue{
+    background-color: rgb(142, 218, 252);
+}
+
+div.left-box,
+.bg-white{
+    background-color: white;
+}
+
+article.p-rem{
+    border: 0.5px solid rgba(128, 128, 128, 0.311);
+    border-left: none;
+    border-right: none;
+    padding: 0.7rem;
+    overflow: auto;
+}
 
 /* ICONS */
 i{
@@ -36,8 +55,18 @@ i{
 
 i.fa-regular.fa-face-smile,
 i.fa-solid.fa-microphone{
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin: 0 auto;
 }
+
+i.fa-regular.fa-bell-slash{
+    background-color: white;
+    border-radius: 1rem;
+    font-size: small;
+    margin: 1rem;
+}
+
+
 
 
 header{
@@ -73,7 +102,8 @@ border: 0.5px solid gray;
 border-left: transparent;
 }
 
-article img.icon-to-talk{
+article img.icon-to-talk,
+article img.reduced-img{
     width: 2.5rem;
     border-radius: 2rem;
 }
@@ -84,4 +114,22 @@ article p .fs-s{
 article p.fs-xs{
     font-size: 0.7rem;
     margin-top: 0.3rem;
+    color: rgb(187, 184, 187);
+}
+
+input.message{
+    width: 650px;
+    padding: 0.6rem;
+    margin: 0.5rem;
+    border: none;
+}
+
+input.search-chat{
+    width: 94%;
+    margin: 0.5rem 0.8rem;
+    padding: 0.5rem;
+}
+
+article p.underline{
+    text-decoration: underline;
 }
