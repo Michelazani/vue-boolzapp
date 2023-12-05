@@ -16,6 +16,15 @@
     justify-content: flex-start;
 }
 
+.end{
+    flex-direction: column;
+    align-items: end;
+}
+
+.start{
+    align-items: start;
+    flex-direction: column;
+}
 /* BACKGROUND */
 article.bg-light{
     background-color:rgb(234, 234, 234) ;
@@ -25,6 +34,7 @@ article.bg-light{
 article.bg-picture{
     height: 85%;
     background-image: url(../img/mine.jpg);
+    padding: 2.5rem;
 }
 
 article.footer{
@@ -36,7 +46,24 @@ article.bg-blue{
 }
 
 div.left-box,
+p.white,
 .bg-white{
+    background-color: white;
+}
+
+p.green,
+p.white{
+    padding: 0.4rem;
+    margin: 0.5rem;
+}
+
+p.green{
+    width: 200px;
+    background-color: rgb(213, 249, 186);
+}
+
+p.white{
+    width: 200px;
     background-color: white;
 }
 
@@ -44,8 +71,11 @@ article.p-rem{
     border: 0.5px solid rgba(128, 128, 128, 0.311);
     border-left: none;
     border-right: none;
-    padding: 0.7rem;
-    overflow: auto;
+    padding: 0.7rem;   
+}
+/* SOSTITUISCO DOPO UN CLICK  */
+article.p-rem:active{
+    background-color: gray;
 }
 
 /* ICONS */
