@@ -51,20 +51,30 @@ p.white,
     background-color: white;
 }
 
+.clearflix::after{
+    display: block;
+    clear: both;
+    content:'';
+}
+
 p.green,
 p.white{
     padding: 0.4rem;
     margin: 0.5rem;
+    clear: both;
+
 }
 
 p.green{
     width: 200px;
     background-color: rgb(213, 249, 186);
+    float: right;
 }
 
 p.white{
     width: 200px;
     background-color: white;
+    float: left;
 }
 
 article.p-rem{
