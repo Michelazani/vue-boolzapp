@@ -42,10 +42,11 @@
                         <input class=" search-chat" type="text" name="search o start a new chat" id="search o start a new chat" placeholder="Cerca o inizia una nuova chat">
                     </article>
                     <article class="flex bg-white p-rem" v-for="(contact, index) in contacts">
-                        <div class="flex ">
-                            <img class="reduced-img" :src="contacts[index].avatar" alt="">
+                        <div class="flex " :dataIndex=" index" >
+                                            <!--data index è l'indice dei contatti -->
+                            <img class="reduced-img" :src="contact.avatar" alt="picture of the contacts ">
                             <div>
-                                <p class="fs-s">{{contacts[index].name}}</p>
+                                <p class="fs-s">{{contact.name}}</p>
                                 <p class="fs-xs">Ultimo messaggio inviato</p>
                             </div>
                         </div>
@@ -71,15 +72,12 @@
                         </span>
                     </article>
 
-                    <article class="bg-picture clearfix" v-for="(msg, indexMsg) in contacs[activeIndex].messages">
-                        <div class="" >
-                            <p class="green">{{ msg.message}}</p>
-                            <p class="green">{{}}</p>
+                    <article class="bg-picture clearfix" >
+                        <div class="" v-for="(msg, indexMsg) in contacts[activeIndex].messages" >
+                            <!-- per ogni messaggio, se lo status è inviato, do la classe green, altrimenti white -->
+                            <p :class="msg.status=== 'sent' ? 'green' : 'white' ">{{ msg.message}}</p>
                         </div>
-                        
-                        <div class="">
-                            <p class="white">{{}}</p>
-                        </div>
+                       
                     </article>
                     <article class=" flex footer">
                         <i class="fa-regular fa-face-smile" style="color: #69747f;"></i>
