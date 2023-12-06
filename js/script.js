@@ -181,7 +181,10 @@ createApp({
         newMessageTyped(newMessage){
             // questo console.log mi serve per vedere quello nuovo che scrivo e invio
             console.log(this.text)
-            this.contacts[this.activeIndex].messages.push({message:newMessage})
+            this.contacts[this.activeIndex].messages.push(
+                // come se creo nuovo oggetto da inserire nell'array, con stesse keys e values. guardo la struttura per capirlo
+                {message:newMessage, status:'sent'}
+            )
             this.text=''
         }
 
