@@ -178,7 +178,7 @@ createApp({
             }
             this.activeIndex = index;
         },
-        newMessageTyped(newMessage){
+        newMessageSent(newMessage){
             // questo console.log mi serve per vedere quello nuovo che scrivo e invio
             console.log(this.text)
             this.contacts[this.activeIndex].messages.push(
@@ -186,6 +186,9 @@ createApp({
                 {message:newMessage, status:'sent'}
             )
             this.text=''
+        },
+        newMessageReceived(newMsg){
+            
         }
 
     }
