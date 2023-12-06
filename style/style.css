@@ -29,15 +29,17 @@
 article.bg-light{
     background-color:rgb(234, 234, 234) ;
     padding: 0.5rem;
+    height: 60px;
 }
 
 article.bg-picture{
-    height: 85%;
+    height: calc(100% - 110px );
     background-image: url(../img/mine.jpg);
     padding: 2.5rem;
 }
 
 article.footer{
+    height: 50px;
     background-color: rgb(243, 238, 234);
 }
 
