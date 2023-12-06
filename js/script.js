@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            text:'',
             activeIndex:0,
             contacts: [
                 {
@@ -175,9 +176,14 @@ createApp({
             if (index >= this.contacts.length || index < 0 ){
                 return false;
             }
-
             this.activeIndex = index;
         },
+        newMessageTyped(newMessage){
+            // questo console.log mi serve per vedere quello nuovo che scrivo e invio
+            console.log(this.text)
+            this.contacts[this.activeIndex].messages.push({message:newMessage, status:this.sent})
+            this.text=''
+        }
 
     }
 }).mount('#app');

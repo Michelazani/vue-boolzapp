@@ -27,6 +27,7 @@ article.bg-picture{
     height: calc(100% - 110px );
     background-image: url(../img/mine.jpg);
     padding: 2.5rem;
+    overflow-y: auto;
 }
 
 article.footer{
@@ -74,7 +75,8 @@ article.p-rem{
     border: 0.5px solid rgba(128, 128, 128, 0.311);
     border-left: none;
     border-right: none;
-    padding: 0.7rem;   
+    padding: 0.7rem; 
+    overflow: scroll;  
 }
 /* SOSTITUISCO DOPO UN CLICK  */
 article.p-rem:active{

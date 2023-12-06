@@ -55,7 +55,6 @@
                 </div>
                 
                 <!-- CASELLA DI DESTRA CON CHAT -->
-
                 <div class="right-box"> 
                     <article class="flex bg-light">
                         <div class="flex">
@@ -81,7 +80,7 @@
                     </article>
                     <article class=" flex footer">
                         <i class="fa-regular fa-face-smile" style="color: #69747f;"></i>
-                        <input class="message" type="text" name="write a message" id="write a message" placeholder="Scrivi un messaggio">
+                        <input class="message" type="text" name="write a message" id="write a message" placeholder="Scrivi un messaggio" v-model="text" @keyup.enter="newMessageTyped(text)">
                         <i class="fa-solid fa-microphone" style="color: #69747f;"></i>
                     </article>
                     
