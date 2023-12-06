@@ -42,7 +42,7 @@
                         <input class=" search-chat" type="text" name="search o start a new chat" id="search o start a new chat" placeholder="Cerca o inizia una nuova chat">
                     </article>
                     <article class="flex bg-white p-rem" v-for="(contact, index) in contacts">
-                        <div class="flex " :dataIndex=" index" >
+                        <div class="flex " :dataIndex=" index" @click="changeChat(index) " >
                                             <!--data index è l'indice dei contatti -->
                             <img class="reduced-img" :src="contact.avatar" alt="picture of the contacts ">
                             <div>
@@ -75,7 +75,7 @@
                     <article class="bg-picture clearfix" >
                         <div class="" v-for="(msg, indexMsg) in contacts[activeIndex].messages" >
                             <!-- per ogni messaggio, se lo status è inviato, do la classe green, altrimenti white -->
-                            <p :class="msg.status=== 'sent' ? 'green' : 'white' ">{{ msg.message}}</p>
+                            <p :class="msg.status=== 'sent' ? 'green' : 'white' " class="flex">{{ msg.message}} <span class="fs-xs">12:00</span></p>
                         </div>
                        
                     </article>

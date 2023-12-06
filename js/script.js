@@ -170,6 +170,14 @@ createApp({
         }
     },
     methods: {
+        // PRENDE INDICE E SOVRASCRIVE ACTIVEINDEX
+        changeChat(index){
+            if (index >= this.contacts.length || index < 0 ){
+                return false;
+            }
+
+            this.activeIndex = index;
+        },
 
     }
 }).mount('#app');

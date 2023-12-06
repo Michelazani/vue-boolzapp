@@ -59,13 +59,13 @@ p.white{
 }
 
 p.green{
-    width: 200px;
+    width: 250px;
     background-color: rgb(213, 249, 186);
     float: right;
 }
 
 p.white{
-    width: 200px;
+    width: 250px;
     background-color: white;
     float: left;
 }
@@ -78,7 +78,7 @@ article.p-rem{
 }
 /* SOSTITUISCO DOPO UN CLICK  */
 article.p-rem:active{
-    background-color: gray;
+    background-color: rgba(200, 200, 200, 0.459);
 }
 
 /* ICONS */
@@ -141,11 +141,11 @@ article img.reduced-img{
     border-radius: 2rem;
 }
 
-article p .fs-s{
+.fs-s{
     font-size: 0.9rem;
 }
 
-article p.fs-xs{
+.fs-xs{
     font-size: 0.7rem;
     margin-top: 0.3rem;
     color: rgb(187, 184, 187);
