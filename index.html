@@ -39,7 +39,7 @@
                         </div>                       
                     </article>
                     <article class="bg-white">
-                        <input class=" search-chat" type="text" name="search o start a new chat" id="search o start a new chat" placeholder="Cerca o inizia una nuova chat">
+                        <input class=" search-chat" type="text" name="search o start a new chat" id="search o start a new chat" placeholder="Cerca o inizia una nuova chat" v-model="searchName">     <!-- con v-model l'ho collegato a vue -->
                     </article>
                     <article class="flex bg-white p-rem" v-for="(contact, index) in contacts">
                         <div class="flex " :dataIndex=" index" @click="changeChat(index) " >
@@ -90,6 +90,9 @@
     </div>
 
     <script src="./js/script.js"></script>
+
+    <!-- luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
 
     
 </body>

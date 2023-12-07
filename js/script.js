@@ -3,9 +3,14 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            // variabile per ricerca a sx
+            searchName: '',
+            // variabile per nuovo messaggio inviato
             text:'',
-            activeIndex:0,
+            // variabile per messaggio di risposta dopo 1 sec
             msgOkay: 'okay',
+            // inizializzato indix da sovrascrivere successivamente
+            activeIndex:0,
             contacts: [
                 {
                     name: 'Michele',
@@ -195,7 +200,6 @@ createApp({
                     status: 'received'}
                     );
             }, 1000)
-            console.log(this.msgOkay)
         }
         }
 }).mount('#app');
