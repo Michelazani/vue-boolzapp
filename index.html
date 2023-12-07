@@ -74,7 +74,7 @@
                     <article class="bg-picture clearfix" >
                         <div class="" v-for="(msg, indexMsg) in contacts[activeIndex].messages" >
                             <!-- per ogni messaggio, se lo status è inviato, do la classe green, altrimenti white -->
-                            <p :class="msg.status=== 'sent' ? 'green' : 'white' " class="flex">{{ msg.message}} <span class="fs-xs">{{msg.date}}</span></p>
+                            <p :class="msg.status=== 'sent' ? 'green' : 'white' " class="flex" >{{ msg.message}} <span class="fs-xs">{{msg.date}}</span></p>
                         </div>
                        
                     </article>

@@ -5,6 +5,7 @@ createApp({
         return {
             text:'',
             activeIndex:0,
+            msgOkay: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -186,12 +187,17 @@ createApp({
                 {message:newMessage, status:'sent'}
             )
             this.text=''
-        },
-        newMessageReceived(newMsg){
             
+            // deve apparire ok dopo 1 sec ad ogni messaggio inserito 
+            setTimeout(() =>{
+                this.contacts[this.activeIndex].messages.push(
+                    {message: this.msgOkay,
+                    status: 'received'}
+                    );
+            }, 1000)
+            console.log(this.msgOkay)
         }
-
-    }
+        }
 }).mount('#app');
 
 
