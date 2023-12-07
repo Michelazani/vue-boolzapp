@@ -58,9 +58,9 @@
                 <div class="right-box"> 
                     <article class="flex bg-light">
                         <div class="flex">
-                            <img class="icon-to-talk" src="./img/avatar_1.jpg" alt="photo of the person you are talking to">
+                            <img class="icon-to-talk" :src="contacts[activeIndex].avatar" alt="photo of the person you are talking to">
                             <div>
-                                <p class="fs-s">Michele</p> 
+                                <p class="fs-s">{{contacts[activeIndex].name}}</p> 
                                 <p class="fs-xs">Ultimo accesso oggi alle 12.00</p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                     <article class="bg-picture clearfix" >
                         <div class="" v-for="(msg, indexMsg) in contacts[activeIndex].messages" >
                             <!-- per ogni messaggio, se lo status è inviato, do la classe green, altrimenti white -->
-                            <p :class="msg.status=== 'sent' ? 'green' : 'white' " class="flex">{{ msg.message}} <span class="fs-xs">12:00</span></p>
+                            <p :class="msg.status=== 'sent' ? 'green' : 'white' " class="flex">{{ msg.message}} <span class="fs-xs">{{msg.date}}</span></p>
                         </div>
                        
                     </article>
