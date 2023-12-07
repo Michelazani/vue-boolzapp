@@ -5,7 +5,7 @@ createApp({
         return {
             text:'',
             activeIndex:0,
-            msgOkay: '',
+            msgOkay: 'okay',
             contacts: [
                 {
                     name: 'Michele',
