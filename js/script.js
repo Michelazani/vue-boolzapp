@@ -200,6 +200,11 @@ createApp({
                     status: 'received'}
                     );
             }, 1000)
+        },
+        // funzione per ricerca del nome 
+        splitLettersForSearch(){
+            // penso con filter
+        
         }
         }
 }).mount('#app');
