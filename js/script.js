@@ -179,9 +179,6 @@ createApp({
     methods: {
         // PRENDE INDICE E SOVRASCRIVE ACTIVEINDEX
         changeChat(index){
-            if (index >= this.contacts.length || index < 0 ){
-                return false;
-            }
             this.activeIndex = index;
         },
         newMessageSent(newMessage){
@@ -203,8 +200,7 @@ createApp({
         },
         // funzione per ricerca del nome 
         splitLettersForSearch(){
-            // penso con filter
-        
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchName.toLowerCase()))
         }
         }
 }).mount('#app');
