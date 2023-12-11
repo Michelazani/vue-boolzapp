@@ -41,17 +41,19 @@
                     <article class="bg-white">
                         <input class=" search-chat" type="text" name="search o start a new chat" id="search o start a new chat" placeholder="Cerca o inizia una nuova chat" v-model="searchName">     <!-- con v-model l'ho collegato a vue -->
                     </article>
-                    <article class="flex bg-white p-rem" v-for="(contact, index) in splitLettersForSearch()">
-                        <div class="flex " :dataIndex=" index" @click="changeChat(index) " >
-                                            <!--data index è l'indice dei contatti -->
-                            <img class="reduced-img" :src="contact.avatar" alt="picture of the contacts ">
-                            <div>
-                                <p class="fs-s">{{contact.name}}</p>
-                                <p class="fs-xs">Ultimo messaggio inviato</p>
+                    <div class="overflow">
+                        <article class="flex bg-white p-rem" v-for="(contact, index) in splitLettersForSearch()">
+                            <div class="flex " :dataIndex=" index" @click="changeChat(index) " >
+                                                <!--data index è l'indice dei contatti -->
+                                <img class="reduced-img" :src="contact.avatar" alt="picture of the contacts ">
+                                <div>
+                                    <p class="fs-s">{{contact.name}}</p>
+                                    <p class="fs-xs">Ultimo messaggio inviato</p>
+                                </div>
                             </div>
-                        </div>
-                        <p class="fs-xs">12:00</p>
-                    </article>
+                            <p class="fs-xs">12:00</p>
+                        </article>
+                    </div>
                 </div>
                 
                 <!-- CASELLA DI DESTRA CON CHAT -->

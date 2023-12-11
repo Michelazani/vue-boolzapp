@@ -71,12 +71,16 @@ p.white{
     float: left;
 }
 
+div.overflow{
+    overflow-y:scroll;  
+    height: 75%;
+}
+
 article.p-rem{
     border: 0.5px solid rgba(128, 128, 128, 0.311);
     border-left: none;
     border-right: none;
     padding: 0.7rem; 
-    overflow: scroll;  
 }
 /* SOSTITUISCO DOPO UN CLICK  */
 article.p-rem:active{

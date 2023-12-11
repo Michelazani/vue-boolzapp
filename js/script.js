@@ -6,9 +6,9 @@ createApp({
             // variabile per ricerca a sx
             searchName: '',
             // variabile per nuovo messaggio inviato
-            text:'',
+            sentText:'',
             // variabile per messaggio di risposta dopo 1 sec
-            msgOkay: 'okay',
+            replyMessage: 'okay',
             // inizializzato indix da sovrascrivere successivamente
             activeIndex:0,
             contacts: [
@@ -172,6 +172,50 @@ createApp({
                             status: 'received'
                         },
                     ],
+                },
+                {
+                    name: 'Giorgio',
+                    avatar: 'img/avatar_3.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '28/03/2020 10:10:40',
+                            message: 'Buongiorno , come va ? ',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            message: 'bene grazie, te?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 16:15:22',
+                            message: 'Bene. Arrivederci!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Emanuele',
+                    avatar: 'img/avatar_2.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '28/03/2020 10:10:40',
+                            message: 'Buongiorno , come va ? ',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            message: 'bene grazie, te?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 16:15:22',
+                            message: 'Bene. Arrivederci!',
+                            status: 'received'
+                        }
+                    ],
                 }
             ]
         }
@@ -181,25 +225,27 @@ createApp({
         changeChat(index){
             this.activeIndex = index;
         },
+
         newMessageSent(newMessage){
             // questo console.log mi serve per vedere quello nuovo che scrivo e invio
-            console.log(this.text)
+            console.log(this.sentText)
             this.contacts[this.activeIndex].messages.push(
                 // come se creo nuovo oggetto da inserire nell'array, con stesse keys e values. guardo la struttura per capirlo
                 {message:newMessage, status:'sent'}
             )
-            this.text=''
+            this.sentText=''
             
             // deve apparire ok dopo 1 sec ad ogni messaggio inserito 
             setTimeout(() =>{
                 this.contacts[this.activeIndex].messages.push(
-                    {message: this.msgOkay,
+                    {message: this.replyMessage,
                     status: 'received'}
                     );
             }, 1000)
         },
         // funzione per ricerca del nome 
         splitLettersForSearch(){
+            // metto .tolowercase a tutti e due in caso uno ricerca nell'input con la maiuscola
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchName.toLowerCase()))
         }
         }
